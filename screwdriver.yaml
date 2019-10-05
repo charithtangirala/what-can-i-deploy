@@ -1,0 +1,6 @@
+jobs:
+  main:
+    requires: [~pr, ~commit]
+    image: gradle:5.6.2-jdk11
+    steps:
+      - unit-test: ./gradlew test
